@@ -20,6 +20,9 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           cache: pnpm
       - run: pnpm install
-      - run: pnpm publish --no-git-checks
+      - name: Publish to GitHub Package Registry
+        run: |
+          sed -i 's+"name": ".*+"name": "@eccentricvamp/grafsign",+gI' ./package.json
+          pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
