@@ -22,7 +22,7 @@ jobs:
       - run: pnpm install
       - name: Publish to GitHub Package Registry
         run: |
-          sed -i 's+"name": ".*+"name": "@eccentricvamp/grafsign",+gI' ./package.json
+          sed -i 's+"name": ".*+"name": "@eccentricvamp/modal-helper",+gI' ./package.json
           pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
