@@ -1,6 +1,6 @@
 {
   "name": "modal-helper",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Helper for Bootstrap 5 modals",
   "type": "module",
   "exports": "./modal-helper.js",
