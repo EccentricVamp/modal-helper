@@ -64,7 +64,8 @@ export async function submit(event: Event): Promise<void> {
     const form = event.target as HTMLFormElement;
     const info = { method: form.method, body: new FormData(form) }
     const response = await fetch(form.action, info);
-    if (response.ok) window.location.reload();
+    if (response.redirected) window.location.assign(response.url);
+    else if (response.ok) window.location.reload();
 }
 
 initialize();
