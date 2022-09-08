@@ -1,4 +1,4 @@
-const ID_MODAL = "modal-helper";
+export const ID_MODAL = "modal-helper";
 const SELECTOR_DATA_TOGGLE_MODAL = "[data-toggle=\"modal-helper\"]";
 
 function getModal(): HTMLDivElement {
